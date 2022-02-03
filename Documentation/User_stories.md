@@ -9,3 +9,26 @@ Assay developers: Develop assays for different diseases and apply our detection 
 Programer: Trains the machine learning algorithm for software. Programmers need to get access to many sample images, run the codes for analysis and compare the results with PCR data. The images the patient got from the cellphone should be submitted to cloud and the program should take the images and return the results to the cellphone. 
 
 Patient: Provides sample and then receives results in further versions will be the only user that interacts with the application for “at home” use. Limited or no background knowledge of jupyter notebooks/python.
+USE CASES
+Feeding Images
+
+Graph of counts
+
+Output to show accuracy of each image with error bar
+
+Progress bar
+
+Text Return for progress 
+
+Create / Upload New standard / disease 
+
+Return Number / Compared to standard
+
+Save Results 
+
+Trends in history 
+
+Local History Browser 
+
+WEBSITE UI 
+
