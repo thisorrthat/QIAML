@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#this is an edit
-=======
-<<<<<<< HEAD
-# QIAML Luke Was here
-=======
->>>>>>> db825ddb7d8582b8f23eca5390e296b87bf565c6
->>>>>>> d9e0075512aa32d185857ba1ad1b58eeb1bcf33c
 # QIAML
-I like mangos
 
-=======
-# QIAML
->>>>>>> 9ec96bd145063bddcc5736ba814c033313c59108
 Quantitative Isothermal Amplification Machine Learning
 goals:
   - cnn-classification 
@@ -30,4 +15,3 @@ goals:
  is the user a developer of diagnotics what to expect
  what makes this a sucess-linearizing the range of response
  how much data do we have
-
