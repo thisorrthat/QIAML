@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # QIAML Luke Was here
+=======
+# QIAML
+I like mangos
+>>>>>>> dbdee4e14886d285159a5ba8a6f7ffe167e1905e
 Quantitative Isothermal Amplification Machine Learning
 goals:
   - cnn-classification 
