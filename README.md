@@ -1,4 +1,5 @@
 # QIAML
+I like mangos
 Quantitative Isothermal Amplification Machine Learning
 goals:
   - cnn-classification 
