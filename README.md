@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 #this is an edit
+=======
+<<<<<<< HEAD
+# QIAML Luke Was here
+=======
+>>>>>>> db825ddb7d8582b8f23eca5390e296b87bf565c6
 # QIAML
+I like mangos
+>>>>>>> dbdee4e14886d285159a5ba8a6f7ffe167e1905e
 Quantitative Isothermal Amplification Machine Learning
 goals:
   - cnn-classification 
@@ -15,3 +23,5 @@ goals:
  is the user a developer of diagnotics what to expect
  what makes this a sucess-linearizing the range of response
  how much data do we have
+
+THis is Luke's Commit. We should make a gnatt chart.
