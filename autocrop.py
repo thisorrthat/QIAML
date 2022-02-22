@@ -10,7 +10,7 @@ import cv2 as cv2
 import numpy as np
 
 
-def crop(array):
+def crop(path):
     """
     Returns a cropped version of the image with the path path.
 
@@ -21,7 +21,7 @@ def crop(array):
     - cropped: image which is the cropped version of the image with the path
                path
     """
-    img = array
+    img = cv2.imread(path, cv2.IMREAD_COLOR)
 
     # leave only green color
     img[:, :, 0] = 0
@@ -48,6 +48,10 @@ def crop(array):
 
     # crop the original image
     cropped = img[crop_box[1]:crop_box[3], crop_box[0]:crop_box[2]]
+    
+    # leave only green color
+    cropped = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
+    
 
     return cropped
 
