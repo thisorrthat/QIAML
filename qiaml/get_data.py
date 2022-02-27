@@ -51,7 +51,9 @@ def get_data_array(Dataset):
         data = np.load('./Datasets/QIAML_Data_C.npy', allow_pickle=True)
         return data
     elif Dataset == 'AC':
-        data = np.load('./Datasets/QIAML_Data_AC.npy', allow_pickle=True)
+        All_1 = np.load('./Datasets/QIAML_Data_AC_1.npy', allow_pickle=True)
+        All_2 = np.load('./Datasets/QIAML_Data_AC_2.npy', allow_pickle=True)
+        data = np.concatenate((All_1, All_2), axis=0)
         return data
     elif Dataset == 'BC':
         data = np.load('./Datasets/QIAML_Data_BC.npy', allow_pickle=True)
