@@ -77,3 +77,23 @@ def get_data_df(Dataset):
     if Dataset == 'All':
         data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
         return data
+    elif Dataset == 'AB':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    elif Dataset == 'A':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    elif Dataset == 'B':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    elif Dataset == 'C':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    elif Dataset == 'AC':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    elif Dataset == 'BC':
+        data = pd.DataFrame(get_data_array(Dataset), columns = ['Images', 'Copy number'])
+        return data
+    else:
+        print('Error: Datasets limited to A, B, C, AB, AC, BC')
