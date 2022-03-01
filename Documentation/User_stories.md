@@ -42,7 +42,38 @@ Provides sample and then receives results in further versions will be the only u
    - Graph of counts, visual display of counts on standard curve
    - Output to show accuracy of each image with error bar
    
-# Process flow
+## Components 
+
+```import_data```
+
+What it does: First step to allow users to load their data. Takes in a directory of image location. Then applies ```autocrop``` functions that crop the images down to the membrane. functions also blur images and apply a contrasting algorithm to aid in visualization.
+Inputs: User acquired RGB jpg images.
+Outputs: .npy files containing the image data flattened to grayscale and cropped to the membrane.
+Interactions: User calls ```import_data``` function at a script level. Ideally users would upload images to website, and this would be the first part of the workflow.
+
+```get_data```
+
+What it does: Allows for simple loading of datasets created by the ```import_data``` functions.
+Inputs: Named dataset created in ```import_data```
+Outputs: NumPy arrays or Pandas dataframes preprocessed and ready for the ML model
+Interactions: User calls ```get_data``` function at a script level. Ideally would automatically follow ```import_data``` in a GUI interface.
+
+```ML model```
+
+What it does: Regression analysis of Image to make a quantification estimate 
+Inputs: Takes preprocessed data from ```get_data```
+Outputs: A trained regression model that has quantification prediction abilities
+Interactions: User interacts at a script level for new assays. For developed assays users could load results from pre-trained models to apply to their data. Unlikely a GUI would have training abilities- user would load pretrained model.
+
+```result_overview```
+
+What it does: shows user results- sanity check by showing user image of amplification pad along with estimate number of copies. May overlay previously developed region spot analysis code for tertiary evaluation.
+Inputs: none
+Outputs: image of amplification pad and quantification estimate.
+Interactions: User interacts with this as a pop-up window or GUI on website.
+
+   
+## Process flow
 1. Images collected on smartphone
     - Automated app based on android APK exists allowing for complete camera control (focal length, iso, flash time, exposure time, time between frames)
       - Built on python for android with kivy, considerations may need to be realized to allow integration with python for android (no scikit learn, yes open cv)
