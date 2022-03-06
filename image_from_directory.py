@@ -1,7 +1,5 @@
 import numpy as np
 import os
-import PIL
-import PIL.Image
 import tensorflow as tf
 
 
@@ -11,7 +9,8 @@ print(tf.__version__)
 img_height = 900
 img_width = 900
 
-data_dir = ('/home/colemar/Pictures/A')
+data_dir = ('/home/colemar/Pictures/BC')
+predict_dir = ('A')
 
 train_ds = tf.keras.utils.image_dataset_from_directory(
   data_dir,
@@ -26,6 +25,11 @@ val_ds = tf.keras.utils.image_dataset_from_directory(
   subset="validation",
   seed=53,
   image_size=(img_height, img_width))
+
+pred_ds= tf.keras.utils.image_dataset_from_directory(
+	predict_dir,
+	seed = 53,
+	image_size=(img_height, img_width))
 
 class_names = train_ds.class_names
 print(class_names)
@@ -62,8 +66,10 @@ model.compile(
 history = model.fit(
   train_ds,
   validation_data=val_ds,
-  epochs=10
+  epochs=100
 )
+model.summary()
 print(history.history.keys())
 print("final MSE for train is %.2f and for validation is %.2f" % 
       (history.history['loss'][-1], history.history['val_loss'][-1]))
+model.save('classifier')
