@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+from PIL import Image
 
 @st.cache()
 def load_model():
