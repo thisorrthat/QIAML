@@ -12,7 +12,8 @@ def predict(
 
 
 st.title('QIAML')
-st.header('Upload Test File Here')
+st.title('Upload Test File Here')
+
 file = st.file_uploader("Upload a image", type=("png", "jpg", "bmp"))
 #if file: #is uploaded file
 #	img = Image.open(file)
