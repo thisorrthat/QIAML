@@ -18,6 +18,10 @@ file = st.file_uploader("Upload a image", type=("png", "jpg", "bmp"))
 #	prediction = predict(img, model)
 #	top_prediciton = prediciton
 
+if file: 
+	img = Image.open(file)
+
+
 st.title("Image Selected")
 resized_image = img.resize((512, 512))
 st.image(resized_image)
