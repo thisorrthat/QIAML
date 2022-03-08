@@ -11,8 +11,8 @@ def predict(
 	img: 
 
 
-st.title('QIAML')
-st.title('Upload Test File Here')
+st.title("QIAML")
+st.title("Upload Test File Here")
 
 file = st.file_uploader("Upload a image", type=("png", "jpg", "bmp"))
 #if file: #is uploaded file
