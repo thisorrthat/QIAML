@@ -9,7 +9,7 @@ def load_model():
 @st.cache()
 def predict(
 	img: 
-
+)
 
 st.title("QIAML")
 st.title("Upload Test File Here")
