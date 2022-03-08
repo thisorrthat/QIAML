@@ -22,8 +22,8 @@ if file:
 	img = Image.open(file)
 
 
-st.title("Image Selected")
-resized_image = img.resize((512, 512))
-st.image(resized_image)
-st.title("Predicted Result")
+	st.title("Image Selected")
+	resized_image = img.resize((200, 200))
+	st.image(resized_image)
+	st.title("Predicted Result")
 
