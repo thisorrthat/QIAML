@@ -6,10 +6,7 @@ def load_model():
 	"""Retrieves the model for the test"""
 	model = tf.keras.models.load_model('classifier BC')
 	return model
-@st.cache()
-def predict(
-	img: 
-)
+
 
 st.title("QIAML")
 st.title("Upload Test File Here")
