@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 @st.cache()
-def load_model
+def load_model:
 	"""Retrieves the model for the test"""
 	model = tf.keras.models.load_model('classifier BC')
 	return model
