@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 from PIL import Image
 
 @st.cache()
@@ -9,14 +8,9 @@ def load_model():
 	return model
 
 
-st.title("QIAML")
-st.title("Upload Test File Here")
+st.title("QIAML Test Results")
+file = st.file_uploader("Upload the image that you are wanting to classify here, either browse or drag ", type=("png", "jpg", "bmp"))
 
-file = st.file_uploader("Upload a image", type=("png", "jpg", "bmp"))
-#if file: #is uploaded file
-#	img = Image.open(file)
-#	prediction = predict(img, model)
-#	top_prediciton = prediciton
 
 if file: 
 	img = Image.open(file)
