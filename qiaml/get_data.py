@@ -119,7 +119,7 @@ def get_data_tf_dataset(train, test):
 	"""
 	if os.path.exists('./Datasets/cropped_jpgs') == True:
 		data_dir = './Datasets/cropped_jpgs/{train}'
-		predit_dir = './Datasets/cropped_jpgs/{test}'
+		predict_dir = './Datasets/cropped_jpgs/{test}'
 		Dataset_from_directory(data_dir, predict_dir)
 	else:
 		print('Error: Download the files from the shared drive link and store them in ./Datasets/cropped_jpgs')
