@@ -6,7 +6,7 @@ Results = "HIGH"
 st.title("QIAML Test Results")
 
 
-file = st.file_uploader("Upload the image that you are wanting to classify here, either browse or drag ", type=("png", "jpg", "bmp"))
+file = st.file_uploader("Upload the image that you are wanting to classify here, either browse or drag ", type=("jpg"))
 
 
 if file: 
