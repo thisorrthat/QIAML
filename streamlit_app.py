@@ -1,23 +1,19 @@
 import streamlit as st
 from PIL import Image
+import numpy as np
 
-@st.cache()
-def load_model():
-	"""Retrieves the model for the test"""
-	model = tf.keras.models.load_model('classifier BC')
-	return model
-
-
+Results = "HIGH"
 st.title("QIAML Test Results")
+
+
 file = st.file_uploader("Upload the image that you are wanting to classify here, either browse or drag ", type=("png", "jpg", "bmp"))
 
 
 if file: 
-	img = Image.open(file)
-
-
-	st.title("Image Selected")
-	resized_image = img.resize((200, 200))
-	st.image(resized_image)
-	st.title("Predicted Result")
-
+    img = Image.open(file)
+    predict = np.asarray(img)
+    st.title("Image Selected")
+    resized_image = img.resize((200, 200))
+    st.image(resized_image)
+    st.title("Predicted Result")
+    st.write(Results)
