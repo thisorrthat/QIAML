@@ -2,6 +2,11 @@ import cv2
 import numpy as np
 import unittest
 from autocrop import crop
+from get_data import get_data_array
+
+"""
+This test file tests the TestCrop function and get_data_array function. Please run it under QIAML/qiaml folder.
+"""
 
 class TestCrop(unittest.TestCase):
     def test_smoke(self):
@@ -18,3 +23,26 @@ class TestCrop(unittest.TestCase):
             crop()
         return
     
+    def test_oneshot2(self):
+        with self.assertRaises(AssertionError):
+            crop('tests/test_image2.jpg')
+        return
+    
+    
+class Test_get_data_array(unittest.TestCase):
+    def test_smoke(self):
+        get_data_array('All')
+        
+    def test_oneshot(self):
+        with self.assertRaises(AssertionError):
+            get_data_array('D')
+        return
+        
+    def test_oneshot2(self):
+        with self.assertRaises(AssertionError):
+            get_data_array()
+        return
+        
+        
+        
+        
