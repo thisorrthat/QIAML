@@ -2,8 +2,11 @@ import cv2
 import numpy as np
 import unittest
 #from qiaml import *
+#import qiaml
 from autocrop import crop
 from get_data import get_data_array
+
+
 
 """
 This test file tests the TestCrop function and get_data_array function. Please run it under QIAML/qiaml folder.
