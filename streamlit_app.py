@@ -17,7 +17,8 @@ if file:
     st.image(resized_image)
     predictions = predict(img, model)
     predictions_label = np.argmax(predictions[0])
-    predictions_label = class_names[predictions_label]
+    label = class_names[predictions_label]
     st.title("Predicted Result")
-    st.title(predictions_label)
+    st.dataframe(predictions)
+    
 

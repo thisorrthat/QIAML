@@ -7,7 +7,7 @@ import numpy as np
 def loadmodel():
     
     model = tf.keras.models.load_model('classmodel')
-    model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
+    #model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
     return model
    
 def predict(img, model):
