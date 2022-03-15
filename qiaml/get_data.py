@@ -3,12 +3,21 @@
 Created on Wed Feb 23 21:52:41 2022
 
 @author: Colem
+
+Modified on Sun Mar 13
+assertions wrote for tests
+Xuetao.
 """
 import os
 
 import numpy as np
 import pandas as pd
+<<<<<<< HEAD
 from tensorflow.keras.utils import image_dataset_from_directory
+=======
+import os
+
+>>>>>>> xuetao
 
 """
 Data sets All, AB, and AC are two part needing to be concatenated, all other data
@@ -17,7 +26,7 @@ sets are one piece
 
 
 
-def get_data_array(Dataset):
+def get_data_array(Dataset=None):
     """
     
     Parameters
@@ -32,6 +41,14 @@ def get_data_array(Dataset):
         input copy number .
         
     """
+    assert type(Dataset) == str, 'The chosen dataset names should be in string format!'
+    
+    Dataset_choices = ['All','AB','A','B','C','AC','BC']
+    assert Dataset in Dataset_choices, 'Error: Datasets limited to A, B, C, AB, AC, BC'
+    path = './Datasets/'
+    ispath = os.path.isdir(path)
+    assert ispath, 'Error Datasets is not downloaded into directory. Please download Datasets.'
+    
     
     if Dataset == 'All':
         All_1 = np.load('./Datasets/QIAML_All_1_Data.npy', allow_pickle=True)
@@ -60,8 +77,6 @@ def get_data_array(Dataset):
     elif Dataset == 'BC':
         data = np.load('./Datasets/QIAML_Data_BC.npy', allow_pickle=True)
         return data
-    else:
-        print('Error: Datasets limited to A, B, C, AB, AC, BC')
 
 def get_data_df(Dataset):
     """
