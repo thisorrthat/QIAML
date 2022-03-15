@@ -1,6 +1,5 @@
 import tensorflow as tf
 import numpy as np
-from tensorflow.keras.utils import image_dataset_from_directory
 
 """This will load the model and return model converted into probability resutls
 """
