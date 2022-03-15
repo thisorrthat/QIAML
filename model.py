@@ -1,12 +1,12 @@
 import tensorflow as tf
 import numpy as np
-
+from tensorflow.keras.utils import image_dataset_from_directory
 
 """This will load the model and return model converted into probability resutls
 """
 def loadmodel():
     
-    model = tf.keras.models.load_model('classmodel')
+    model = tf.keras.models.load_model('classifier 3_split_final')
     #model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
     return model
    
